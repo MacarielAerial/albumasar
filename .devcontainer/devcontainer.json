@@ -1,0 +1,34 @@
+{
+	"name": "${localWorkspaceFolderBasename}",
+	"dockerComposeFile": [
+		"../docker-compose.yml",
+		"docker-compose.yml"
+	],
+    "service": "${localWorkspaceFolderBasename}",
+	"features":  {
+		"ghcr.io/devcontainers/features/sshd:1": {}
+	},
+	"workspaceFolder": "/home/vscode/workspaces/${localWorkspaceFolderBasename}",
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"python.defaultInterpreterPath": "/workspaces/${localWorkspaceFolderBasename}/.venv/bin/python3",
+				"terminal.integrated.shell.linux": "/bin/bash",
+				"remote.ssh.enableAgentForwarding": true
+			},
+			"extensions": [
+				"vscodevim.vim",
+				"ms-python.python",
+				"charliermarsh.ruff",
+				"ms-toolsai.jupyter",
+				"mechatroner.rainbow-csv",
+				"tamasfe.even-better-toml",
+				"davidanson.vscode-markdownlint",
+				"fnando.linter",
+				"ms-azuretools.vscode-docker",
+				"github.vscode-github-actions"
+			]
+		}
+	},
+	"remoteUser": "vscode"
+}

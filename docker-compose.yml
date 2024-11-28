@@ -1,0 +1,13 @@
+name: gaia-live
+
+services:
+  gaia:
+    build:
+      context: .
+      # This docker compose file is used in production
+      target: live
+      dockerfile: Dockerfile
+    image: gaia-live
+    container_name: gaia-live
+    ports:
+      - '5000:8080'
